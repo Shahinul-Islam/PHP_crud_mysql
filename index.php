@@ -30,6 +30,8 @@ $insert = true;
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+		
 
 		<!-- Bootstrap CSS -->
 		<link
@@ -38,6 +40,9 @@ $insert = true;
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+		<script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+		
 
 		<title>PHP Notes-CRUD</title>
 	</head>
@@ -134,7 +139,7 @@ $insert = true;
 			// }
 
             ?>
-			<table class="table">
+			<table class="table" id="myTable">
   <thead>
     <tr>
       <th scope="col">Sl. No.</th>
@@ -167,5 +172,8 @@ $insert = true;
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			let table = new DataTable('#myTable');
+		</script>
 	</body>
 </html>
